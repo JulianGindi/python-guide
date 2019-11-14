@@ -17,16 +17,16 @@ Any other reasonable development environment should have a working version.
 
 **Use python virtual environments**
 
-There are a few schools of thought here, but I primarily follow a two-tier approach to virtualenv creation using both virtualenvwrapper and pipenv. 
+There are a few schools of thought here, but I primarily follow a two-tier approach to virtualenv creation using both virtualenvwrapper and pipenv.
 
 
 ### [`virtualenvwrapper`](https://virtualenvwrapper.readthedocs.io/en/latest/)
 
-I mostly use `virtualenvwrapper` to create more "system-level" environments. These typically isolate tools based on categories such as "devops tools" vs "scientific computing tools" or however you would like to organize cross-project shared dependency management. 
+I mostly use `virtualenvwrapper` to create more "system-level" environments. These typically isolate tools based on categories such as "devops tools" vs "scientific computing tools" or however you would like to organize cross-project shared dependency management.
 
-#### Setup 
+#### Setup
 
-For `virtualenvwrapper`, you need to install the package, as well as set up a few things in your shell environment. YMMV with the commands below, but the key one to potentially modify is the location of the virtualenvwrapper script. For Mac OS, these commands should work fine. 
+For `virtualenvwrapper`, you need to install the package, as well as set up a few things in your shell environment. YMMV with the commands below, but the key one to potentially modify is the location of the virtualenvwrapper script. For Mac OS, these commands should work fine.
 
 ```
 $ pip install virtualenvwrapper
@@ -74,7 +74,7 @@ $ pipenv sync             # Main command you want to run to sync with lockfile a
 $ pipenv sync --dev       # Same as above but installs development dependencies
 ```
 
-Unless you have "assumed the pipenv shell", you can run python commands in the environment with 
+Unless you have "assumed the pipenv shell", you can run python commands in the environment with
 
 `$ pipenv run python manage.py runserver` for example...
 
@@ -84,7 +84,11 @@ Unless you have "assumed the pipenv shell", you can run python commands in the e
 
 #### Installing
 
-`pip install black` or `pipenv install black --dev`
+`pip install black`
+
+or
+
+`pipenv install black --dev`
 
 I love Black to keep style arguments at bay and I enjoy its overall approach to formatting. I set up VSCode to "format on save" for Python code. Below is the snippet in my config file to enable that (note, this also enables PEP8 style gutters):
 
