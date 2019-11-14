@@ -80,4 +80,31 @@ Unless you have "assumed the pipenv shell", you can run python commands in the e
 
 ## Formatting and Style
 
-### Use Black
+### Use [Black](https://github.com/psf/black)
+
+#### Installing
+
+`pip install black` or `pipenv install black --dev`
+
+I love Black to keep style arguments at bay and I enjoy its overall approach to formatting. I set up VSCode to "format on save" for Python code. Below is the snippet in my config file to enable that (note, this also enables PEP8 style gutters):
+
+```
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+            79,
+            120
+        ]
+    },
+```
+
+#### Additional Usage
+
+I like to modify Black's behavior a bit to limit line length. The following file "pyproject.toml" can be placed in the root of your project directory to enable that:
+
+`pyproject.toml`
+
+```
+[tool.black]
+line-length = 79
+```
